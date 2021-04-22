@@ -81,11 +81,17 @@
 
       const seconds = now.getSeconds();
       const secondsDegrees = ((seconds / 60) * 360) + 90;
-      if (seconds === 60) {
-        secondHand.style.transform = 'transition(0)'
-      };
+      // if (seconds === 60) {
+      //   secondHand.style.transform = 'transition(0)';
+      //   minHand.style.transform = 'transition(0)';
+      //   hourHand.style.transform = 'transition(0)';
+      // };
+      // else {
+      //   secondHand.style.transform = 'transition(all 0.05s)';
+      //   minHand.style.transform = 'transition(all 0.05s)';
+      //   hourHand.style.transform = 'transition(all 0.05s)';
+      // }
       secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
-
       const mins = now.getMinutes();
       const minsDegrees = ((mins / 60) * 360) + 90;
       minHand.style.transform = `rotate(${minsDegrees}deg)`;
